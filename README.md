@@ -64,7 +64,6 @@
        //获取数据
         private void getData(final Boolean b) {
             EGRequestParams parm=new EGRequestParams();
-//        parm.addBodyParameter();
              parm.addBodyParameter("pageIndex",pageIndex+"");
             parm.addBodyParameter("pageSize","10");
             parm.addBodyParameter("name","");
