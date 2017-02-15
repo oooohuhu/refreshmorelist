@@ -1,4 +1,5 @@
 # refreshmorelist
+再次说明，非本人所写，仅限学习使用
 上拉刷新下拉加载更多
  首先是布局 
  在EgojitPullRecyclerView中要使用到TwinklingRefreshLayout
