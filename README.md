@@ -1,9 +1,9 @@
 # refreshmorelist
 上拉刷新下拉加载更多
-# 首先是布局 
-# 在EgojitPullRecyclerView中要使用到TwinklingRefreshLayout
-# 源码已经给出只给布局了
-# <com.asuka.android.asukaandroid.widget.listViews.tkrefreshlayout.TwinklingRefreshLayout
+ 首先是布局 
+ 在EgojitPullRecyclerView中要使用到TwinklingRefreshLayout
+ 源码已经给出只给布局了
+ <com.asuka.android.asukaandroid.widget.listViews.tkrefreshlayout.TwinklingRefreshLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/refreshLayout"
@@ -28,6 +28,9 @@
     </com.asuka.android.asukaandroid.widget.listViews.tkrefreshlayout.EgojitPullRecyclerView>
     
     接下来就是使用了
+    
+    
+    
      @ViewInject(R.id.listView)
     private EgojitPullRecyclerView listView;
      //初始化
@@ -36,6 +39,8 @@
         listView.getRecyclerView().setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
         getData(true);
     }
+    
+    
     //初始化事件
     private void initEvent() {
         listView.setCallBack(new RefreshCallBack() {
@@ -54,6 +59,8 @@
         });
         listView.startRefresh();
         }
+        
+        
        //获取数据
         private void getData(final Boolean b) {
             EGRequestParams parm=new EGRequestParams();
@@ -82,6 +89,8 @@
                 }
             });
     }
+    
+    
     //adapter取数据展示
     public BaseRecyclerAdapter adapter=new BaseRecyclerAdapter() {
         @Override
